@@ -37,10 +37,6 @@ error_reporting(0);
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet"> 
 </head>
 <body>
-
-<!-- Start Switcher -->
-<?php include('includes/colorswitcher.php');?>
-<!-- /Switcher -->  
         
 <!--Header-->
 <?php include('includes/header.php');?>
@@ -153,10 +149,6 @@ error_reporting(0);
 </section>
 <!-- /Testimonial--> 
 
-
-<!--Footer -->
-<?php include('includes/footer.php');?>
-<!-- /Footer--> 
 
 <!--Back to top-->
 <div id="back-top" class="back-top"> <a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i> </a> </div>

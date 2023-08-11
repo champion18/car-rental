@@ -46,6 +46,8 @@ echo "<script type='text/javascript'> document.location = 'change-password.php';
 </head>
 
 <body>
+<?php include('../includes/header.php');?>
+
 
 	<div class="login-page bk-img" style="background-image: url(img/adminlogin.jpg);">
 		<div class="form-content">

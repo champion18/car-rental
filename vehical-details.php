@@ -74,10 +74,6 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
 </head>
 <body>
 
-<!-- Start Switcher -->
-<?php include('includes/colorswitcher.php');?>
-<!-- /Switcher -->  
-
 <!--Header-->
 <?php include('includes/header.php');?>
 <!-- /Header --> 
@@ -402,9 +398,6 @@ foreach($results as $result)
 </section>
 <!--/Listing-detail--> 
 
-<!--Footer -->
-<?php include('includes/footer.php');?>
-<!-- /Footer--> 
 
 <!--Back to top-->
 <div id="back-top" class="back-top"> <a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i> </a> </div>

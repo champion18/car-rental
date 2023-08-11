@@ -56,10 +56,6 @@ else{
 </head>
 <body>
 
-<!-- Start Switcher -->
-<?php include('includes/colorswitcher.php');?>
-<!-- /Switcher -->
-
 <!--Header-->
 <?php include('includes/header.php');?>
 <!--Page Header-->
@@ -166,7 +162,6 @@ foreach($results as $result)
   </div>
 </section>
 <!--/my-vehicles-->
-<?php include('includes/footer.php');?>
 
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>

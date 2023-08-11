@@ -80,21 +80,22 @@ if (strlen($_SESSION['agencylogin']) == 0) {
 	</head>
 
 	<body>
-		<?php include('includes/header.php'); ?>
-
 		<div class="ts-main-content">
-			<?php include('includes/leftbar.php'); ?>
 			<div class="content-wrapper">
 				<div class="container-fluid">
 
 					<div class="row">
 						<div class="col-md-12">
 
-							<h2 class="page-title">Manage Vehicles</h2>
-							<a href="post-avehicle.php"><i class="fa fa-edit"></i></a>
+							<div style="display: flex;
+    justify-content: space-between;
+    align-items: center;">
+							<h2 class="page-title" style>Manage Vehicles</h2>
+							<a href="post-avehicle.php">+ Add New Vehicle</a>
+							</div>
 							<!-- Zero Configuration Table -->
 							<div class="panel panel-default">
-								<div class="panel-heading">Vehicle Details</div>
+								<!-- <div class="panel-heading">Vehicle Details</div> -->
 								<div class="panel-body">
 									<?php if ($error) { ?>
 										<div class="errorWrap"><strong>ERROR</strong>:
@@ -146,11 +147,7 @@ if (strlen($_SESSION['agencylogin']) == 0) {
 														<td>
 															<?php echo htmlentities($result->RentPerDay); ?>
 														</td>
-														<td><a href="edit-vehicle.php?id=<?php echo $result->id; ?>"><i
-																	class="fa fa-edit"></i></a>&nbsp;&nbsp;
-															<a href="manage-vehicles.php?del=<?php echo $result->id; ?>"
-																onclick="return confirm('Do you want to delete');"><i
-																	class="fa fa-close"></i></a>
+														<td><a href="edit-vehicle.php?id=<?php echo $result->id; ?>">Edit</i></a>&nbsp;&nbsp;
 														</td>
 													</tr>
 													<?php $cnt = $cnt + 1;

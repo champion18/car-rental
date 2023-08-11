@@ -933,9 +933,13 @@ table thead th, table thead td {
 	2.1 Navigation & Dropdown Menu
 ------------------------------------------*/
 #navigation_bar {
-  background: #111111 none repeat scroll 0 0;
+  background: #a869f4 none repeat scroll 0 0;
   border-radius: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 #navigation {
   padding: 0;
@@ -964,7 +968,7 @@ nav.navbar {
   padding-right: 0;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #fff;
+  color: #0f0101;
   display: block;
   font-size: 13px;
   font-weight: 800;
@@ -4044,25 +4048,6 @@ table.info-tabel tr td {
 	margin:5px 0 0;
 	font-weight:300;
 	font-size:18px;
-}
-.vs {
-  border-radius: 50%;
-  color: #ffffff;
-  display: block;
-  font-size: 14px;
-  font-weight: 400;
-  height: 32px;
-  line-height: 30px;
-  position: absolute;
-  right: -15px;
-  text-align: center;
-  top: 50%;
-  width: 32px;
-  transform:translateY(-50%)
-   -moz-transform:translateY(-50%);
-    -o-transform:translateY(-50%);
-     -webkit-transform:translateY(-50%);
-     -md-transform:translateY(-50%)
 }
 .td_divider {
   display: block;

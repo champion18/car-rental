@@ -49,26 +49,26 @@ CREATE TABLE `agencies` (
 -- Table structure for table `tblbooking`
 --
 
-CREATE TABLE `tblbooking` (
+CREATE TABLE `bookings` (
   `id` int(11) NOT NULL,
-  `BookingNumber` bigint(12) DEFAULT NULL,
-  `userEmail` varchar(100) DEFAULT NULL,
-  `VehicleId` int(11) DEFAULT NULL,
-  `FromDate` varchar(20) DEFAULT NULL,
-  `ToDate` varchar(20) DEFAULT NULL,
-  `message` varchar(255) DEFAULT NULL,
-  `Status` int(11) DEFAULT NULL,
-  `PostingDate` timestamp NOT NULL DEFAULT current_timestamp(),
-  `LastUpdationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
+   `VehicleId` int(11) NOT NULL,
+  `AgencyId` int(11) NOT NULL,
+   `UserEmail` varchar(255) NOT NULL,
+  `Amount` int(20) NOT NULL,
+  `DaysRented` int(11) NOT NULL,
+  `StartDate` varchar(255) DEFAULT NULL,
+  `BookingDate` timestamp NOT NULL DEFAULT current_timestamp(),
+    PRIMARY KEY (`id`)
+
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tblbooking`
 --
 
-INSERT INTO `tblbooking` (`id`, `BookingNumber`, `userEmail`, `VehicleId`, `FromDate`, `ToDate`, `message`, `Status`, `PostingDate`, `LastUpdationDate`) VALUES
-(3, 123456789, 'test1@gmail.com', 1, '2022-01-02', '2022-01-03', 'What  is the cost?', 1, '2022-02-02 14:03:09', '2022-01-03 13:48:07'),
-(4, 987456321, 'test2@gmail.com', 4, '2022-01-03', '2022-01-04', 'hfghg', 1, '2022-01-03 17:49:21', '2022-01-29 23:23:46');
+-- INSERT INTO `tblbooking` (`id`, `BookingNumber`, `userEmail`, `VehicleId`, `FromDate`, `ToDate`, `message`, `Status`, `PostingDate`, `LastUpdationDate`) VALUES
+-- (3, 123456789, 'test1@gmail.com', 1, '2022-01-02', '2022-01-03', 'What  is the cost?', 1, '2022-02-02 14:03:09', '2022-01-03 13:48:07'),
+-- (4, 987456321, 'test2@gmail.com', 4, '2022-01-03', '2022-01-04', 'hfghg', 1, '2022-01-03 17:49:21', '2022-01-29 23:23:46');
 
 -- --------------------------------------------------------
 
@@ -257,45 +257,45 @@ CREATE TABLE `vehicles` (
 -- (8, 'Maruti Suzuki Vitara Brezza', 1, 'The new Vitara Brezza is a well-rounded package that is feature-loaded and offers good drivability. And it is backed by Maruti’s vast service network, which ensures a peace of mind to customers. The petrol motor could have been more refined and offered more pep.', 600, 'Petrol', 2018, 5, 'marutisuzuki-vitara-brezza-right-front-three-quarter3.jpg', 'marutisuzuki-vitara-brezza-rear-view37.jpg', 'marutisuzuki-vitara-brezza-dashboard10.jpg', 'marutisuzuki-vitara-brezza-boot-space59.jpg', 'marutisuzuki-vitara-brezza-boot-space28.jpg', NULL, 1, 1, 1, NULL, NULL, 1, NULL, NULL, NULL, 1, NULL, '2020-07-07 09:23:11', NULL);
 --
 -- Indexes for table `tblbooking`
---
-ALTER TABLE `tblbooking`
-  ADD PRIMARY KEY (`id`);
+-- --
+-- ALTER TABLE `tblbooking`
+--   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tblbrands`
---
-ALTER TABLE `tblbrands`
-  ADD PRIMARY KEY (`id`);
+-- --
+-- ALTER TABLE `tblbrands`
+--   ADD PRIMARY KEY (`id`);
 
---
--- Indexes for table `tblcontactusinfo`
---
-ALTER TABLE `tblcontactusinfo`
-  ADD PRIMARY KEY (`id`);
+-- --
+-- -- Indexes for table `tblcontactusinfo`
+-- --
+-- ALTER TABLE `tblcontactusinfo`
+--   ADD PRIMARY KEY (`id`);
 
---
--- Indexes for table `tblcontactusquery`
---
-ALTER TABLE `tblcontactusquery`
-  ADD PRIMARY KEY (`id`);
+-- --
+-- -- Indexes for table `tblcontactusquery`
+-- --
+-- ALTER TABLE `tblcontactusquery`
+--   ADD PRIMARY KEY (`id`);
 
---
--- Indexes for table `tblpages`
---
-ALTER TABLE `tblpages`
-  ADD PRIMARY KEY (`id`);
+-- --
+-- -- Indexes for table `tblpages`
+-- --
+-- ALTER TABLE `tblpages`
+--   ADD PRIMARY KEY (`id`);
 
---
--- Indexes for table `tblsubscribers`
---
-ALTER TABLE `tblsubscribers`
-  ADD PRIMARY KEY (`id`);
+-- --
+-- -- Indexes for table `tblsubscribers`
+-- --
+-- ALTER TABLE `tblsubscribers`
+--   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tbltestimonial`
 --
-ALTER TABLE `tbltestimonial`
-  ADD PRIMARY KEY (`id`);
+-- ALTER TABLE `tbltestimonial`
+--   ADD PRIMARY KEY (`id`);
 
 
 
@@ -306,42 +306,42 @@ ALTER TABLE `agencies`
 --
 -- AUTO_INCREMENT for table `tblbooking`
 --
-ALTER TABLE `tblbooking`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE `bookings`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tblbrands`
 --
-ALTER TABLE `tblbrands`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+-- ALTER TABLE `tblbrands`
+--   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tblcontactusinfo`
 --
-ALTER TABLE `tblcontactusinfo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+-- ALTER TABLE `tblcontactusinfo`
+--   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tblcontactusquery`
---
-ALTER TABLE `tblcontactusquery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+-- -- AUTO_INCREMENT for table `tblcontactusquery`
+-- --
+-- ALTER TABLE `tblcontactusquery`
+--   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
---
+-- --
 -- AUTO_INCREMENT for table `tblpages`
 --
-ALTER TABLE `tblpages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+-- ALTER TABLE `tblpages`
+--   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `tblsubscribers`
---
-ALTER TABLE `tblsubscribers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+-- --
+-- ALTER TABLE `tblsubscribers`
+--   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 
-ALTER TABLE `tbltestimonial`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+-- ALTER TABLE `tbltestimonial`
+--   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 
 ALTER TABLE `users`
@@ -349,7 +349,7 @@ ALTER TABLE `users`
 
 
 ALTER TABLE `vehicles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

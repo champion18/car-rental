@@ -6,14 +6,6 @@ if (strlen($_SESSION['agencylogin']) == 0) {
 	header('location:index.php');
 } else {
 
-	if (isset($_REQUEST['del'])) {
-		$delid = intval($_GET['del']);
-		$sql = "delete from vehicles SET id=:status WHERE  id=:delid";
-		$query = $dbh->prepare($sql);
-		$query->bindParam(':delid', $delid, PDO::PARAM_STR);
-		$query->execute();
-		$msg = "Vehicle  record deleted successfully";
-	}
 	?>
 
 	<?php

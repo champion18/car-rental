@@ -17,7 +17,7 @@
         <?php if ($_SESSION['agencylogin']) { ?>
           <li><a href="agency/manage-vehicles.php" data-toggle="modal" data-dismiss="modal">Add New Car</a></li>
           <li><a href="agency/manage-bookings.php" data-toggle="modal" data-dismiss="modal">View Booked Cars</a></li>
-        <?php } else { ?>
+        <?php } else if (!$_SESSION['login']) { ?>
           <li><a href="#regagencyform" data-toggle="modal" data-dismiss="modal">Register Your Agency</a></li>
         <?php } ?>
 

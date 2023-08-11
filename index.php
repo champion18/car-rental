@@ -43,14 +43,10 @@ error_reporting(0);
 </head>
 
 <body>
-
-  <!-- Start Switcher -->
-  <?php include('includes/colorswitcher.php'); ?>
-  <!-- /Switcher -->
-
-  <!--Header-->
-  <?php include('includes/header.php'); ?>
-  <!-- /Header -->
+        
+<!--Header-->
+<?php include('includes/header.php');?>
+<!-- /Header --> 
 
   <!-- Banners -->
   <section id="banner" class="banner-section">
@@ -225,10 +221,6 @@ error_reporting(0);
   </section>
   <!-- /Testimonial-->
 
-
-  <!--Footer -->
-  <?php include('includes/footer.php'); ?>
-  <!-- /Footer-->
 
   <!--Back to top-->
   <div id="back-top" class="back-top"> <a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i> </a> </div>

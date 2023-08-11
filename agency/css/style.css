@@ -39,11 +39,11 @@ body {
   font-size: 1em;
 }
 a {
-  color: #37a6c4;
+  color: #000304;
 }
 a:hover {
   text-decoration: none;
-  color: #5db9d1;
+  color: #000304;
 }
 /****************************
 *      Buttons        *
@@ -473,6 +473,10 @@ li {
 /* Social Button Modifications */
 .btn {
   text-transform: none;
+  width: 100px;
+  background-color: #8b50f6;
+  font-size: 16px;
+  border-radius: 24px;
 }
 .btn-social > :first-child {
   width: 42px;
@@ -545,7 +549,7 @@ li {
   border-bottom: 1px solid #f0f0f0;
 }
 .brand {
-  background: #3e454c;
+  background: #f47575;
   position: relative;
   z-index: 3;
   position: fixed;
@@ -612,7 +616,7 @@ li {
 }
 .brand .ts-profile-nav .ts-account > a {
   width: 180px;
-  background: #2c3136;
+  background: #2e659d;
 }
 .brand .ts-profile-nav .ts-account .ts-avatar {
   border-radius: 50%;
@@ -640,7 +644,7 @@ li {
   background-color: #b4b4b4;
 }
 .ts-sidebar {
-  background: #2c3136;
+  background: #f47575;
   max-height: 0;
   transition: max-height 0.3s;
   overflow: hidden;
@@ -656,7 +660,7 @@ li {
 }
 .ts-sidebar .ts-sidebar-search {
   width: 100%;
-  background: #25292a;
+  background: #f47575;
   border: none;
   padding: 10px 15px;
   color: #fff;
@@ -685,7 +689,7 @@ li {
   display: block;
   text-decoration: none;
   padding: 12px 15px;
-  color: #fff;
+  color: #000000;
 }
 .ts-sidebar-menu li {
   position: relative;
@@ -734,9 +738,6 @@ li {
   .ts-main-content .ts-sidebar {
     width: 250px;
     float: left;
-  }
-  .ts-main-content .content-wrapper {
-    margin-left: 250px;
   }
 }
 /* Login page */
